@@ -168,7 +168,7 @@ async function deletePostFromDB(docId: string) {
   await deleteDoc(doc(db, "posts", docId));
 }
 
-function fetchInRealtimeAndRenderPostsFromDB(query: Query<Post>, user: User) {
+function fetchInRealtimeAndRenderPostsFromDB(query: Query<Post>, _user: User) {
   onSnapshot(query, (querySnapshot) => {
     uiElements.posts.innerHTML = "";
 
